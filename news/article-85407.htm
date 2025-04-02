@@ -1,0 +1,266 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpndog.github.io/news/article-85407.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SpringBoot常用拦截器（HandlerInterceptor，ClientHttpRequestInterceptor，RequestInterceptor）</title>
+        <meta name="description" content="SpringBoot常用拦截器（HandlerInterceptor，ClientHttpRequestInterceptor，RequestInterceptor）  上面3种拦截器，都是http拦" />
+        <link rel="icon" href="/assets/website/img/xraywindows/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN狗 节点机场订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpndog.github.io/news/article-85407.htm" />
+    <meta property="og:site_name" content="VPN狗 节点机场订阅中文网" />
+    <meta property="og:title" content="SpringBoot常用拦截器（HandlerInterceptor，ClientHttpRequestInterceptor，RequestInterceptor）" />
+    <meta property="og:image" content="https://vpndog.github.io/uploads/20240815/fa0a6998347f14d880989b2fe3cc4aa6.webp" />
+        <meta property="og:release_date" content="2025-03-31T08:41:34" />
+    <meta property="og:updated_time" content="2025-03-31T08:41:34" />
+        <meta property="og:description" content="SpringBoot常用拦截器（HandlerInterceptor，ClientHttpRequestInterceptor，RequestInterceptor）  上面3种拦截器，都是http拦" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SpringBoot常用拦截器（HandlerInterceptor，ClientHttpRequestInterceptor，RequestInterceptor）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slicknav.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/themify-icons.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slick.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/nice-select.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5625HHV5KB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5625HHV5KB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="body-bg" data-page="detail">
+        <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/assets/website/img/xraywindows/logo/loder.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-md-4">
+                                <div class="logo">
+                                    <a href="/">
+                                                                        <span>VPN狗</span>
+                                                                        </a>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                                                                <li><a href="/">首页</a></li>
+                                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 hero-overly2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h1>SpringBoot常用拦截器（HandlerInterceptor，ClientHttpRequestInterceptor，RequestInterceptor）</h1>
+                                <p>
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <h4><a id="SpringBootHandlerInterceptorClientHttpRequestInterceptorRequestInterceptor_1" rel="nofollow"></a>SpringBoot常用拦截器（HandlerInterceptor，ClientHttpRequestInterceptor，RequestInterceptor）</h4> <blockquote> <p>上面3种拦截器，都是http拦截器，在处理业务逻辑之前对http请求信息进行处理，比如获取请求头，请求参数，设置请求头，请求参数等等</p> </blockquote> <p>思路清晰，先说jar包:</p> <p><code>HandlerInterceptor</code>—&gt;<code>spring-webmvc</code>项目，<code>org.springframework.web.servlet.HandlerInterceptor</code></p> <p><code>ClientHttpRequestInterceptor</code>—&gt;<code>spring-web</code>项目，<code>org.springframework.http.client.ClientHttpRequestInterceptor</code></p> <p><code>RequestInterceptor</code>—&gt;<code>feign-core</code>项目，<code>feign.RequestInterceptor</code></p> <p><strong>一目了然，从项目名称和包路径可以看出，3个拦截器分别属于3个不同的项目，所以他们之前的作用也有区别，在这里我大概讲一下3个拦截器的基本应用和区别：</strong></p> <p>3个拦截器的共同点，都是对http请求进行拦截，但是<code>http</code>请求的来源不同</p> <ul> <li><code>HandlerInterceptor</code>是最常规的，其拦截的<code>http</code>请求是来自于客户端浏览器之类的，是最常见的<code>http</code>请求拦截器；</li> <li><code>ClientHttpRequestInterceptor</code>是对<code>RestTemplate</code>的请求进行拦截的，在项目中直接使用<code>restTemplate.getForObject</code>的时候，会对这种请求进行拦截，经常被称为：<code>RestTempalte</code>拦截器或者<code>Ribbon</code>拦截器；</li> <li><code>RequestInterceptor</code>常被称为是<code>Feign</code>拦截器，由于<code>Feign</code>调用底层实际上还是<code>http</code>调用，因此也是一个<code>http</code>拦截器，在项目中使用Feign调用的时候，可以使用此拦截器；</li> </ul> <p></p> <h4><a id="HandlerInterceptor_27" rel="nofollow"></a>谈谈HandlerInterceptor</h4> <p>从包路径可以看出，这个是处理客户端<code>http servlet</code>请求的，此项目<code>spring-webmvc</code>与<code>spring-mvc</code>项目关闭密切，<code>HandlerInterceptor</code>可以对请求的各个阶段进行拦截，可以说是非常全面了。这个也是常规项目中用的最多的，对http请求进行拦截</p> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">interface</span><span class="token class-name">HandlerInterceptor</span><span class="token punctuation">{<!-- --></span><span class="token comment">/**前置处理：在业务处理器处理请求之前被调用*/</span><span class="token keyword">boolean</span><span class="token function">preHandle</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">,</span> Object handler<span class="token punctuation">)</span><span class="token keyword">throws</span> Exception<span class="token punctuation">;</span><span class="token comment">/**中置处理：在业务处理器处理请求执行完成后，生成视图之前执行。后处理（调用了Service并返回ModelAndView，但未进行页面渲染），有机会修改ModelAndView ，现在这个很少使用了*/</span><span class="token keyword">void</span><span class="token function">postHandle</span><span class="token punctuation">(</span> 			HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">,</span> Object handler<span class="token punctuation">,</span> ModelAndView modelAndView<span class="token punctuation">)</span><span class="token keyword">throws</span> Exception<span class="token punctuation">;</span><span class="token comment">/**后置处理：在DispatcherServlet完全处理完请求后被调用，可用于清理资源等*/</span><span class="token keyword">void</span><span class="token function">afterCompletion</span><span class="token punctuation">(</span> 			HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">,</span> Object handler<span class="token punctuation">,</span> Exception ex<span class="token punctuation">)</span><span class="token keyword">throws</span> Exception<span class="token punctuation">;</span></code></pre> <p><strong>使用示例</strong>（<code>HandlerInterceptorAdapter</code>实现了<code>HandlerInterceptor</code>接口）</p> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">class</span><span class="token class-name">TestFilter</span><span class="token keyword">extends</span><span class="token class-name">HandlerInterceptorAdapter</span><span class="token punctuation">{<!-- --></span><span class="token keyword">private</span><span class="token keyword">final</span> Logger logger<span class="token operator">=</span> LoggerFactory<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span>TestFilter<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">boolean</span><span class="token function">preHandle</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">,</span> Object handler<span class="token punctuation">)</span><span class="token keyword">throws</span> Exception<span class="token punctuation">{<!-- --></span> 		logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"request请求地址path[{}] uri[{}]"</span><span class="token punctuation">,</span> request<span class="token punctuation">.</span><span class="token function">getServletPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>request<span class="token punctuation">.</span><span class="token function">getRequestURI</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//request.getHeader(String) 从请求头中获取数据</span><span class="token comment">//从请求头中获取用户token（登陆凭证根据业务而定）</span> 		Long userId<span class="token operator">=</span><span class="token function">getUserId</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span><span class="token function">getHeader</span><span class="token punctuation">(</span><span class="token string">"H-User-Token"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>userId<span class="token operator">!=</span> null<span class="token operator">&amp;&amp;</span><span class="token function">checkAuth</span><span class="token punctuation">(</span>userId<span class="token punctuation">,</span>request<span class="token punctuation">.</span><span class="token function">getRequestURI</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token boolean">true</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">//这里的异常是我自定义的异常，系统抛出异常后框架捕获异常然后转为统一的格式返回给前端， 其实这里也可以返回false</span><span class="token keyword">throw</span><span class="token keyword">new</span><span class="token class-name">FastRuntimeException</span><span class="token punctuation">(</span><span class="token number">20001</span><span class="token punctuation">,</span><span class="token string">"No access"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">private</span> Long<span class="token function">getUserId</span><span class="token punctuation">(</span>String userToken<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 	Long userId<span class="token operator">=</span> null<span class="token punctuation">;</span><span class="token keyword">return</span> userId<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">private</span><span class="token keyword">boolean</span><span class="token function">checkAuth</span><span class="token punctuation">(</span>Long userId<span class="token punctuation">,</span>String requestURI<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token boolean">true</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">postHandle</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">,</span> Object handler<span class="token punctuation">,</span> 					   ModelAndView modelAndView<span class="token punctuation">)</span><span class="token keyword">throws</span> Exception<span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">afterCompletion</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">,</span> Object handler<span class="token punctuation">,</span> Exception ex<span class="token punctuation">)</span><span class="token keyword">throws</span> Exception<span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span></code></pre> <p>}</p> <h4><a id="ClientHttpRequestInterceptor_90" rel="nofollow"></a>谈谈ClientHttpRequestInterceptor</h4> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">interface</span><span class="token class-name">ClientHttpRequestInterceptor</span><span class="token punctuation">{<!-- --></span><span class="token comment">/**只有这一个方法，在项目中直接使用 restTemplate.getForObject 的时候，会对这种请求进行拦截*/</span>    ClientHttpResponse<span class="token function">intercept</span><span class="token punctuation">(</span>HttpRequest request<span class="token punctuation">,</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> body<span class="token punctuation">,</span> ClientHttpRequestExecution execution<span class="token punctuation">)</span><span class="token keyword">throws</span> IOException<span class="token punctuation">;</span></code></pre> <p>使用示例（<code>SESSIONID</code>可以从<code>RequestContextHolder</code>中拿到）</p> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">class</span><span class="token class-name">RestClientHttpRequestInterceptor</span><span class="token keyword">implements</span><span class="token class-name">ClientHttpRequestInterceptor</span><span class="token punctuation">{<!-- --></span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span> ClientHttpResponse<span class="token function">intercept</span><span class="token punctuation">(</span>HttpRequest request<span class="token punctuation">,</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> body<span class="token punctuation">,</span> ClientHttpRequestExecution execution<span class="token punctuation">)</span><span class="token keyword">throws</span> IOException<span class="token punctuation">{<!-- --></span>         HttpHeaders headers<span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getHeaders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         headers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Cookie"</span><span class="token punctuation">,</span><span class="token string">"SESSIONID=b8dd5bd9-9fb7-48cb-a86b-e079cb554fb8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"拦截器已添加header"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">return</span> execution<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p></p> <h4><a id="RequestInterceptor_116" rel="nofollow"></a>谈谈RequestInterceptor</h4> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">interface</span><span class="token class-name">RequestInterceptor</span><span class="token punctuation">{<!-- --></span><span class="token comment">/**在项目中使用Feign调用的时候，可以使用此拦截器*/</span><span class="token keyword">void</span><span class="token function">apply</span><span class="token punctuation">(</span>RequestTemplate template<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p>使用示例</p> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">class</span><span class="token class-name">FeignInterceptor</span><span class="token keyword">implements</span><span class="token class-name">RequestInterceptor</span><span class="token punctuation">{<!-- --></span><span class="token keyword">private</span><span class="token keyword">static</span><span class="token keyword">final</span> String SESSIONID<span class="token operator">=</span><span class="token string">"SESSIONID"</span><span class="token punctuation">;</span><span class="token keyword">private</span><span class="token keyword">static</span><span class="token keyword">final</span> String SESSIONID_PREFIX<span class="token operator">=</span><span class="token string">"SESSIONID="</span><span class="token punctuation">;</span><span class="token keyword">private</span><span class="token keyword">static</span><span class="token keyword">final</span> String COOKIE<span class="token operator">=</span><span class="token string">"Cookie"</span><span class="token punctuation">;</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">apply</span><span class="token punctuation">(</span>RequestTemplate requestTemplate<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             ServletRequestAttributes servletAttributes<span class="token operator">=</span><span class="token punctuation">(</span>ServletRequestAttributes<span class="token punctuation">)</span> RequestContextHolder<span class="token punctuation">.</span><span class="token function">getRequestAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             HttpServletRequest httpServletRequest<span class="token operator">=</span> servletAttributes<span class="token punctuation">.</span><span class="token function">getRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             Cookie<span class="token punctuation">[</span><span class="token punctuation">]</span> cookies<span class="token operator">=</span> httpServletRequest<span class="token punctuation">.</span><span class="token function">getCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span>Cookie cookie<span class="token operator">:</span> cookies<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">if</span><span class="token punctuation">(</span>SESSIONID<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>cookie<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>                     requestTemplate<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span>COOKIE<span class="token punctuation">,</span> SESSIONID_PREFIX<span class="token operator">+</span>cookie<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-84688.htm">关于动物诊疗许可证好办吗现在怎么办的信息</a></p>
+                                        <p>下一个：<a href="/news/article-85408.htm">Istio实践流量控制及服务间调用</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-69037.htm" title="动物疫苗的作用有哪些呢英语 动物疫苗的作用有哪些呢英语翻译">动物疫苗的作用有哪些呢英语 动物疫苗的作用有哪些呢英语翻译</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-24-clash-v2ray-ss-ssr.htm" title="VPN狗 | 3月24日18.7M/S|免费VPN/Clash/V2ray/Shadowrocket/SSR免费节点链接地址">VPN狗 | 3月24日18.7M/S|免费VPN/Clash/V2ray/Shadowrocket/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-79081.htm" title="青岛想念动物医院电话地址查询号码（青岛想念动物医院电话地址查询号码是多少）">青岛想念动物医院电话地址查询号码（青岛想念动物医院电话地址查询号码是多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-free-subscribe-node.htm" title="VPN狗 | 3月4日19.5M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN狗 | 3月4日19.5M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-77022.htm" title="宠物粮食批发厂家价格表图片高清（宠物粮市场前景怎么样）">宠物粮食批发厂家价格表图片高清（宠物粮市场前景怎么样）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-node-share-links.htm" title="VPN狗 | 3月20日21.5M/S|免费VPN/Clash/SSR/V2ray/Shadowrocket免费节点链接地址">VPN狗 | 3月20日21.5M/S|免费VPN/Clash/SSR/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-72315.htm" title="宠物领养平台论文摘要怎么写的（宠物领养文章）">宠物领养平台论文摘要怎么写的（宠物领养文章）</a></li>
+                        <li class="py-2"><a href="/news/article-67740.htm" title="宠物医院治疗仓鼠费用高吗（一般的宠物医院治仓鼠吗）">宠物医院治疗仓鼠费用高吗（一般的宠物医院治仓鼠吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-node-share.htm" title="VPN狗 | 3月6日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址">VPN狗 | 3月6日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-85408.htm" title="Istio实践流量控制及服务间调用">Istio实践流量控制及服务间调用</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Area End -->
+    </main>
+        <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="/assets/website/img/xraywindows/gallery/footer_bg.jpg">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                <p>
+                                    VPN狗 节点机场订阅中文网 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    <!-- JS here -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.slicknav.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="/assets/website/js/frontend/xraywindows/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="/assets/website/js/frontend/xraywindows/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/animated.headline.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.magnific-popup.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.nice-select.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.sticky.js"></script>
+
+    <!-- contact js -->
+    <script src="/assets/website/js/frontend/xraywindows/contact.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.form.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.validate.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/mail-script.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.ajaxchimp.min.js"></script>
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="/assets/website/js/frontend/xraywindows/plugins.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
