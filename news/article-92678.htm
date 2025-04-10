@@ -1,0 +1,268 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpndog.github.io/news/article-92678.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Shell基础管道符介绍</title>
+        <meta name="description" content="我们之前已经有文章说过管道符了，今天这里再简单总结一下用法。  1、行提取命令grep grep命令的作用，是在指定的文件中，搜索符合条件的字符串。 命令格式： [root@localhost ~ ]" />
+        <link rel="icon" href="/assets/website/img/xraywindows/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN狗 节点机场订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpndog.github.io/news/article-92678.htm" />
+    <meta property="og:site_name" content="VPN狗 节点机场订阅中文网" />
+    <meta property="og:title" content="Shell基础管道符介绍" />
+    <meta property="og:image" content="https://vpndog.github.io/uploads/20240815/b39c531934ebc23219f36d4970d967d5.webp" />
+        <meta property="og:release_date" content="2025-04-10T08:17:57" />
+    <meta property="og:updated_time" content="2025-04-10T08:17:57" />
+        <meta property="og:description" content="我们之前已经有文章说过管道符了，今天这里再简单总结一下用法。  1、行提取命令grep grep命令的作用，是在指定的文件中，搜索符合条件的字符串。 命令格式： [root@localhost ~ ]" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Shell基础管道符介绍">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slicknav.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/themify-icons.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slick.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/nice-select.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5625HHV5KB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5625HHV5KB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="body-bg" data-page="detail">
+        <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/assets/website/img/xraywindows/logo/loder.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-md-4">
+                                <div class="logo">
+                                    <a href="/">
+                                                                        <span>VPN狗</span>
+                                                                        </a>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                                                                <li><a href="/">首页</a></li>
+                                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 hero-overly2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h1>Shell基础管道符介绍</h1>
+                                <p>
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div class="toc"> <div class="toc-container-header"><span style="font-size: 1em;">我们之前已经有文章说过管道符了，今天这里再简单总结一下用法。</span></div> </div> <h2 id="1行提取命令grep">1、行提取命令grep</h2> <p><code>grep</code>命令的作用，是在指定的文件中，搜索符合条件的字符串。</p> <p>命令格式：</p> <pre><code class="language-shell">[root@localhost ~ ] # grep [选项] ”搜索内容” 文件名</code></pre> <p>选项：</p> <ul> <li><code>-A 数字</code>：列出符合条件的行，并列出后续的n行。</li> <li><code>-B 数字</code>：列出符合条件的行，并列出前面的n行。</li> <li><code>-c</code>：统计找到的符合条件的字符串的次数。</li> <li><code>-i</code>：忽略大小写。</li> <li><code>-n</code>：输出行号。</li> <li><code>-v</code>：反向查找。</li> <li><code>--color=auto</code>：搜索出的关键字用颜色显示。</li> </ul> <p>示例：</p> <ul> <li>例子1：查找用户信息文件<code>/etc/passwd</code>中，有多少可以登录的用户。 <pre><code class="language-shell">[root@localhost ~]# grep "/bin/bash" /etc/passwd</code></pre> </li> <li>例子2：查找用户信息文件<code>/etc/passwd</code>中，包含有<code>root</code>的行，并列出后续的3行。 <pre><code class="language-shell">[root@localhost ~]# grep -A 3 "root" /etc/passwd</code></pre> </li> <li>例子3：查找用户信息文件<code>/etc/passwd</code>中，可以登录的用户，并显示行号。 <pre><code class="language-shell">[root@localhost ~]# grep -n "/bin/bash" /etc/passwd</code></pre> </li> <li>例子4：查找用户信息文件<code>/etc/passwd</code>中，不含有<code>/bin/bash</code>的行，其实就是列出所有的伪用户。 <pre><code class="language-shell">[root@localhost ~]# grep -v "/bin/bash" /etc/passwd</code></pre> </li> </ul> <h2 id="2find和grep的区别">2、find和grep的区别</h2> <p><code>find</code>命令是在系统当中搜索符合条件的文件名，搜索时文件名是完全匹配。如果需要模糊查询，使用通配符进行匹配。</p> <pre><code class="language-shell">#建立文件abc [root@localhost ~ ] # touch abc  #建立文件abcd [root@localhost ~ ] # touch abcd  #查找abc文件 [root@localhost ~ ] # find . -name ”abc" ./abc</code></pre> <p>搜索文件名是<code>abc</code>的文件，只会找到<code>abc</code>文件，而不会找到文件<code>abcd</code>。虽然<code>abed</code>文件名中包含<code>abc</code>，但是<code>find</code>命令是完全匹配，只能和要搜索的数据完全一样，才能找到。</p> <blockquote> <p>注意：</p> <p><code>find</code>命令是可以通过<code>-regex</code>选项识别正则表达式规则的，也就是说<code>find</code>命令可以按照正则表达式规则匹配，而正则表达式是模糊匹配。但是对于初学者而言，<code>find</code>命令和<code>grep</code>命令本身就不好理解，所以我们这里只按照通配符规则来进行<code>find</code>查询。</p> </blockquote> <p><code>grep</code>命令是在文件当中搜索符合条件的字符串，如果需要模糊查询，使用正则表达式进行匹配，搜索时字符串是包含匹配。</p> <pre><code class="language-shell">#在test文件中写入abc数据 [root@localhost ~ ] # echo abc &gt; test  #在test文件中再追加abcd数据 [root@localhost ~]#echo abcd &gt;&gt; test  #在test文件中查找abc字符串 [root@localhost ~]#grep”abc" test abc abcd</code></pre> <p><code>grep</code>命令查找时，只要数据行中包含有<code>abc</code>，就会都列出，所以<code>abc</code>和<code>abed</code>都可以查询到。</p> <h2 id="3管道符">3、管道符</h2> <p>管道符之前总结过，请看之前的文章：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/liuyuelinfighting/p/15530010.html"  target="_blank" rel="nofollow">https://www.cnblogs.com/liuyuelinfighting/p/15530010.html</a>。</p> <p>我们下面简单的做几个练习：</p> <ul> <li>练习1：<br /> 查询本地所有网络连接，提取包含ESTABLISHED（已建立连接）的行，就可以知道我们的服务器上有多少已经成功连接的网络连接。</p> <pre><code class="language-shell">[root@localhost ~]# netstat -an | grep "ESTABLISHED"</code></pre> </li> <li>练习2：<br /> 如果想知道具体的网络连接数量，就可以再使用<code>wc</code>命令统计行数。</p> <pre><code class="language-shell">[root@localhost ~]# netstat -an | grep "ESTABLISHED" | wc -l</code></pre> </li> </ul> <h2 id="4通配符">4、通配符</h2> <p>通配符是用来匹配文件名的，文件名在查询的时候是完全匹配的，必须一模一样才会查询出，否则就要加通配符，进行模糊查询。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/f215829c6a91f22afaccaf13cc181b75.jpg" alt="Shell基础管道符介绍"></p> <p>练习：</p> <pre><code class="language-shell"># 创建4个测试文件 [root@localhost tmp]# touch abc [root@localhost tmp]# touch abcd [root@localhost tmp]# touch 012 [root@localhost tmp]# touch 0abc  # “*”代表查找所有的文件 [root@localhost tmp]# ls * 012 0abc abc abcd  # “？"匹配任意一个字符，所以会匹配0abc #但是不能匹配abc，因为“？”"不能匹配空 [root@localhost tmp]# ls ?abc 0abc  # 匹配任何以数字开头的文件 [root@localhost tmp]# ls [0-9]* 012 0abc  # 匹配不已数字开头的文件 [root@localhost tmp]# ls [^0-9]* abc abed</code></pre> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-91969.htm">C++引用以及结构体</a></p>
+                                        <p>下一个：<a href="/news/article-92679.htm">宠物粮食成本分析论文（宠物粮食成本分析论文题目）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-81836.htm" title="vue @blur 和 .trim()">vue @blur 和 .trim()</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-16-free-v2ray-subscribe.htm" title="VPN狗 | 3月16日18.9M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN狗 | 3月16日18.9M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-68381.htm" title="上海宠物领养救助基地 上海宠物领养救助基地是真的吗">上海宠物领养救助基地 上海宠物领养救助基地是真的吗</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-node-share.htm" title="VPN狗 | 3月12日20.3M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址">VPN狗 | 3月12日20.3M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-84688.htm" title="关于动物诊疗许可证好办吗现在怎么办的信息">关于动物诊疗许可证好办吗现在怎么办的信息</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-31-free-v2ray-subscribe.htm" title="VPN狗 | 3月31日20.6M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN狗 | 3月31日20.6M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-v2ray.htm" title="VPN狗 | 3月18日20.1M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN狗 | 3月18日20.1M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-90489.htm" title="58同城免费领养猫送到家吗安全吗（58同城领养宠物的平台）">58同城免费领养猫送到家吗安全吗（58同城领养宠物的平台）</a></li>
+                        <li class="py-2"><a href="/news/article-76355.htm" title="动物疫苗查询系统官网（动物疫苗批号查询网）">动物疫苗查询系统官网（动物疫苗批号查询网）</a></li>
+                        <li class="py-2"><a href="/news/article-91966.htm" title="Tkinter python GUI程序在PyCharm远程服务器中运行并正常弹出界面">Tkinter python GUI程序在PyCharm远程服务器中运行并正常弹出界面</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Area End -->
+    </main>
+        <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="/assets/website/img/xraywindows/gallery/footer_bg.jpg">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                <p>
+                                    VPN狗 节点机场订阅中文网 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    <!-- JS here -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.slicknav.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="/assets/website/js/frontend/xraywindows/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="/assets/website/js/frontend/xraywindows/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/animated.headline.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.magnific-popup.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.nice-select.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.sticky.js"></script>
+
+    <!-- contact js -->
+    <script src="/assets/website/js/frontend/xraywindows/contact.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.form.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.validate.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/mail-script.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.ajaxchimp.min.js"></script>
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="/assets/website/js/frontend/xraywindows/plugins.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
