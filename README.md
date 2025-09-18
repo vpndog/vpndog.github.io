@@ -1,4 +1,4 @@
-# VPN狗 | 9月12日20.7M/S|免费VPN/SSR/Shadowrocket/Clash/V2ray免费节点链接地址  更新时间 2025-09-12 06:08:55
+# VPN狗 | 9月18日21.4M/S|免费VPN/Shadowrocket/SSR/V2ray/Clash免费节点链接地址  更新时间 2025-09-18 09:51:29
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vpndog.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://vpndog.github.io/uploads/2025/09/0-20250912.yaml
-- https://vpndog.github.io/uploads/2025/09/1-20250912.yaml
-- https://vpndog.github.io/uploads/2025/09/2-20250912.yaml
-- https://vpndog.github.io/uploads/2025/09/3-20250912.yaml
-- https://vpndog.github.io/uploads/2025/09/4-20250912.yaml
+- https://vpndog.github.io/uploads/2025/09/0-20250918.yaml
+- https://vpndog.github.io/uploads/2025/09/1-20250918.yaml
+- https://vpndog.github.io/uploads/2025/09/2-20250918.yaml
+- https://vpndog.github.io/uploads/2025/09/3-20250918.yaml
+- https://vpndog.github.io/uploads/2025/09/4-20250918.yaml
 
 ### V2ray订阅链接
 
-- https://vpndog.github.io/uploads/2025/09/0-20250912.txt
-- https://vpndog.github.io/uploads/2025/09/1-20250912.txt
-- https://vpndog.github.io/uploads/2025/09/2-20250912.txt
-- https://vpndog.github.io/uploads/2025/09/3-20250912.txt
-- https://vpndog.github.io/uploads/2025/09/4-20250912.txt
+- https://vpndog.github.io/uploads/2025/09/0-20250918.txt
+- https://vpndog.github.io/uploads/2025/09/1-20250918.txt
+- https://vpndog.github.io/uploads/2025/09/2-20250918.txt
+- https://vpndog.github.io/uploads/2025/09/3-20250918.txt
+- https://vpndog.github.io/uploads/2025/09/4-20250918.txt
 
 ### Sing-box订阅链接
 
-- https://vpndog.github.io/uploads/2025/09/20250912.json
+- https://vpndog.github.io/uploads/2025/09/20250918.json
 
 ## 更多clash节点订阅 ：
 
