@@ -172,14 +172,14 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>ShadowsocksR 支持哪些混淆插件？</h5></div>
+    <div class="panel-heading"><h5>Trojan-Go 是否支持 WebSocket？</h5></div>
     <div class="panel-body">
-        ShadowsocksR 提供多种混淆方式，如 tls1.2_ticket_auth、http_simple、random_head 等。它们通过模拟正常流量特征来规避防火墙检测，使通信更加隐蔽。<hr />    </div>
+        Trojan-Go 增强了原版 Trojan，支持 WebSocket、gRPC 等多种传输方式。通过这些传输层协议，可在伪装网站下运行代理服务，提高隐蔽性和灵活性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 节点测速功能如何优化游戏体验？</h5></div>
+    <div class="panel-heading"><h5>如何识别节点是否被封锁或限速？</h5></div>
     <div class="panel-body">
-        Shadowrocket 会定期测速节点延迟和丢包率，并结合策略组自动切换最佳节点。保证游戏流量走低延迟节点，减少延迟和掉线，提高游戏流畅度和稳定性。<hr />    </div>
+        通过对比不同节点的 speedtest、ping、下载测速以及 traceroute 路由变化来判断；若多个节点同时异常可能是本地网络问题，单个节点异常则可能被封锁或运营商限速，应尝试更换端口或传输方式。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 如何结合延迟选择最优节点？</h5></div>
@@ -192,34 +192,34 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         Clash 会定期测试节点延迟，并结合策略组自动选择最优节点处理流量。避免访问高延迟或失效节点，提高网页浏览、视频播放和游戏速度及稳定性，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan TLS 伪装域名如何提高抗封锁能力？</h5></div>
-    <div class="panel-body">
-        通过选择真实可访问域名并使用有效证书，Trojan 流量可以完全模拟 HTTPS 请求。隐藏真实流量特征，降低被封锁和 DPI 检测风险，保证节点长期可用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何识别节点是否被封锁或限速？</h5></div>
-    <div class="panel-body">
-        通过对比不同节点的 speedtest、ping、下载测速以及 traceroute 路由变化来判断；若多个节点同时异常可能是本地网络问题，单个节点异常则可能被封锁或运营商限速，应尝试更换端口或传输方式。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 能否兼容最新的 iOS 系统？</h5></div>
     <div class="panel-body">
         Potatso Lite 更新频率较低，在新版本 iOS 上可能出现兼容性问题。若遇到无法连接或闪退情况，建议升级至其他活跃维护的客户端如 Shadowrocket 或 Quantumult X。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的流量分流规则支持哪些条件？</h5></div>
+    <div class="panel-heading"><h5>Trojan TLS 伪装域名如何提高抗封锁能力？</h5></div>
     <div class="panel-body">
-        V2Ray 支持按域名、IP、端口、协议或用户标签进行分流。用户可灵活设置国内直连、国外代理或特定节点，实现精准控制和网络优化。<hr />    </div>
+        通过选择真实可访问域名并使用有效证书，Trojan 流量可以完全模拟 HTTPS 请求。隐藏真实流量特征，降低被封锁和 DPI 检测风险，保证节点长期可用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan-Go 是否支持 WebSocket？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 节点测速功能如何优化游戏体验？</h5></div>
     <div class="panel-body">
-        Trojan-Go 增强了原版 Trojan，支持 WebSocket、gRPC 等多种传输方式。通过这些传输层协议，可在伪装网站下运行代理服务，提高隐蔽性和灵活性。<hr />    </div>
+        Shadowrocket 会定期测速节点延迟和丢包率，并结合策略组自动切换最佳节点。保证游戏流量走低延迟节点，减少延迟和掉线，提高游戏流畅度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>ShadowsocksR 支持哪些混淆插件？</h5></div>
+    <div class="panel-body">
+        ShadowsocksR 提供多种混淆方式，如 tls1.2_ticket_auth、http_simple、random_head 等。它们通过模拟正常流量特征来规避防火墙检测，使通信更加隐蔽。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 的多节点分流如何设置？</h5></div>
     <div class="panel-body">
-        可通过策略组定义不同节点用途和优先级，结合规则文件将特定域名、IP 或端口流量分流至相应节点，实现游戏、视频或网页加速，并优化整体网络性能和稳定性。    </div>
+        可通过策略组定义不同节点用途和优先级，结合规则文件将特定域名、IP 或端口流量分流至相应节点，实现游戏、视频或网页加速，并优化整体网络性能和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的流量分流规则支持哪些条件？</h5></div>
+    <div class="panel-body">
+        V2Ray 支持按域名、IP、端口、协议或用户标签进行分流。用户可灵活设置国内直连、国外代理或特定节点，实现精准控制和网络优化。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -248,16 +248,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-26-vpn-github.htm" title="VPN狗 | 11月26日21.3M/S|免费VPN/SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点免费节点链接地址">VPN狗 | 11月26日21.3M/S|免费VPN/SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-23-mianfei-vpn.htm" title="VPN狗 | 11月23日21.7M/S|免费VPN/Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN狗 | 11月23日21.7M/S|免费VPN/Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-4-vpn-node.htm" title="VPN狗 | 11月4日21.2M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点链接地址">VPN狗 | 11月4日21.2M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-22-vpn-github.htm" title="VPN狗 | 11月22日18.8M/S|免费VPN/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点免费节点链接地址">VPN狗 | 11月22日18.8M/S|免费VPN/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-free-vpn-node.htm" title="VPN狗 | 11月13日19.2M/S|免费VPN/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址">VPN狗 | 11月13日19.2M/S|免费VPN/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-2-free-node-subscribe.htm" title="VPN狗 | 12月2日22.7M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点免费节点链接地址">VPN狗 | 12月2日22.7M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-6-share-vpn.htm" title="VPN狗 | 12月6日18M/S|免费VPN/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点链接地址">VPN狗 | 12月6日18M/S|免费VPN/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-8-node-share-links.htm" title="VPN狗 | 11月8日18.7M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址">VPN狗 | 11月8日18.7M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-3-free-node-subscribe.htm" title="VPN狗 | 12月3日19.5M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址">VPN狗 | 12月3日19.5M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-14-vpn-proxy.htm" title="VPN狗 | 11月14日20.1M/S|免费VPN/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点免费节点链接地址">VPN狗 | 11月14日20.1M/S|免费VPN/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-9-top-vpn-node.htm" title="VPN狗 | 11月9日18.8M/S|免费VPN/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点免费节点链接地址">VPN狗 | 11月9日18.8M/S|免费VPN/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-10-vpn-free.htm" title="VPN狗 | 11月10日19.3M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点免费节点链接地址">VPN狗 | 11月10日19.3M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-29-free-vpn.htm" title="VPN狗 | 11月29日19.6M/S|免费VPN/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点免费节点链接地址">VPN狗 | 11月29日19.6M/S|免费VPN/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-19-vpn-node.htm" title="VPN狗 | 10月19日23M/S|免费VPN/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址">VPN狗 | 10月19日23M/S|免费VPN/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-13-top-vpn.htm" title="VPN狗 | 10月13日21.8M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点免费节点链接地址">VPN狗 | 10月13日21.8M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-5-mianfei-vpn.htm" title="VPN狗 | 11月5日22.5M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN狗 | 11月5日22.5M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-15-vpn-node.htm" title="VPN狗 | 11月15日21.7M/S|免费VPN/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点免费节点链接地址">VPN狗 | 11月15日21.7M/S|免费VPN/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-30-free-vpn.htm" title="VPN狗 | 11月30日18.2M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点免费节点链接地址">VPN狗 | 11月30日18.2M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点免费节点链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -269,10 +269,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                     </ul>
     </div>
