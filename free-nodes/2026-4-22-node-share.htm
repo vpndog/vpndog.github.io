@@ -351,9 +351,39 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf ~/Libra
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 的多用户限速功能如何使用？</h5></div>
+    <div class="panel-body">
+        Hiddify Next 支持在管理面板中为每个用户设置带宽上限。管理员可以按需分配速率或流量配额，防止单一用户占用过多资源，从而保持整体网络稳定。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密在封锁严格地区的作用？</h5></div>
+    <div class="panel-body">
+        AEAD 加密防止数据篡改和流量特征泄露，降低被封锁和 DPI 检测风险。保证节点长期可用，提高数据传输安全性和访问可靠性，优化用户体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 是否支持 Vless？</h5></div>
+    <div class="panel-body">
+        目前 Potatso Lite 仅支持 Shadowsocks 和 Vmess 协议，不支持 Vless。但开发者正在逐步扩展功能，未来可能加入更多现代代理协议支持。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 的节点测速功能有何局限？</h5></div>
+    <div class="panel-body">
+        Potatso Lite 节点测速只能显示延迟，无法测出带宽或实际下载速度。此外，测速结果受网络波动影响较大，建议结合实际使用体验来判断节点性能。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟？</h5></div>
+    <div class="panel-body">
+        将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点延迟和健康状态自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟和稳定连接。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 支持多配置文件加载吗？</h5></div>
     <div class="panel-body">
         Clash 支持多配置切换，用户可在图形界面中导入多个 YAML 文件，并通过选择不同配置快速切换使用场景。例如家用模式、移动模式或公司网络模式。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 的 QUIC 模式相比 TCP 有哪些优势？</h5></div>
+    <div class="panel-body">
+        QUIC 协议基于 UDP，可减少握手延迟并在高丢包环境下保持较好体验。Hysteria2 对 QUIC 进行了优化，支持自适应拥塞控制与加密，能在移动网络中比 TCP 拥有更快的响应速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 的 Rule Provider 功能是干什么的？</h5></div>
@@ -368,37 +398,7 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf ~/Libra
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 DNS 模块如何提升解析速度？</h5></div>
     <div class="panel-body">
-        V2Ray 内置 DNS 模块支持并行解析，可同时请求多个上游 DNS 服务器。用户可配置本地优先解析或远程解析策略，从而减少域名污染与延迟问题。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 是否支持 Vless？</h5></div>
-    <div class="panel-body">
-        目前 Potatso Lite 仅支持 Shadowsocks 和 Vmess 协议，不支持 Vless。但开发者正在逐步扩展功能，未来可能加入更多现代代理协议支持。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟？</h5></div>
-    <div class="panel-body">
-        将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点延迟和健康状态自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟和稳定连接。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 的 QUIC 模式相比 TCP 有哪些优势？</h5></div>
-    <div class="panel-body">
-        QUIC 协议基于 UDP，可减少握手延迟并在高丢包环境下保持较好体验。Hysteria2 对 QUIC 进行了优化，支持自适应拥塞控制与加密，能在移动网络中比 TCP 拥有更快的响应速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 的多用户限速功能如何使用？</h5></div>
-    <div class="panel-body">
-        Hiddify Next 支持在管理面板中为每个用户设置带宽上限。管理员可以按需分配速率或流量配额，防止单一用户占用过多资源，从而保持整体网络稳定。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在封锁严格地区的作用？</h5></div>
-    <div class="panel-body">
-        AEAD 加密防止数据篡改和流量特征泄露，降低被封锁和 DPI 检测风险。保证节点长期可用，提高数据传输安全性和访问可靠性，优化用户体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 的节点测速功能有何局限？</h5></div>
-    <div class="panel-body">
-        Potatso Lite 节点测速只能显示延迟，无法测出带宽或实际下载速度。此外，测速结果受网络波动影响较大，建议结合实际使用体验来判断节点性能。    </div>
+        V2Ray 内置 DNS 模块支持并行解析，可同时请求多个上游 DNS 服务器。用户可配置本地优先解析或远程解析策略，从而减少域名污染与延迟问题。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -427,16 +427,16 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf ~/Libra
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-17-top-vpn-node.htm" title="VPN狗 | 4月17日22.2M/S|免费VPN/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址">VPN狗 | 4月17日22.2M/S|免费VPN/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-28-mianfei-vpn.htm" title="VPN狗 | 3月28日19.7M/S|免费VPN/Clash节点/SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点链接地址">VPN狗 | 3月28日19.7M/S|免费VPN/Clash节点/SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-23-vpn-github.htm" title="VPN狗 | 4月23日22M/S|免费VPN/SSR节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点/V2ray节点免费节点链接地址">VPN狗 | 4月23日22M/S|免费VPN/SSR节点/Shadowrocket节点/Trojan节点/Clash节点/Singbox节点/V2ray节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-5-top-vpn-node.htm" title="VPN狗 | 3月5日22.1M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点免费节点链接地址">VPN狗 | 3月5日22.1M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-6-vpn-free.htm" title="VPN狗 | 3月6日21.8M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点免费节点链接地址">VPN狗 | 3月6日21.8M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-10-free-vpn.htm" title="VPN狗 | 3月10日20.8M/S|免费VPN/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点免费节点链接地址">VPN狗 | 3月10日20.8M/S|免费VPN/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-7-node-share.htm" title="VPN狗 | 3月7日21M/S|免费VPN/SSR节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点链接地址">VPN狗 | 3月7日21M/S|免费VPN/SSR节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-21-vpn-node.htm" title="VPN狗 | 3月21日20.3M/S|免费VPN/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址">VPN狗 | 3月21日20.3M/S|免费VPN/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-15-vpn-github.htm" title="VPN狗 | 3月15日22.9M/S|免费VPN/V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点免费节点链接地址">VPN狗 | 3月15日22.9M/S|免费VPN/V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-12-node-share.htm" title="VPN狗 | 4月12日21.3M/S|免费VPN/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点免费节点链接地址">VPN狗 | 4月12日21.3M/S|免费VPN/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-13-free-node-subscribe-links.htm" title="VPN狗 | 3月13日20.5M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/V2ray节点免费节点链接地址">VPN狗 | 3月13日20.5M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/V2ray节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-11-top-vpn.htm" title="VPN狗 | 4月11日21.3M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址">VPN狗 | 4月11日21.3M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-18-vpn-free.htm" title="VPN狗 | 4月18日21.4M/S|免费VPN/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点免费节点链接地址">VPN狗 | 4月18日21.4M/S|免费VPN/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-15-top-vpn-node.htm" title="VPN狗 | 4月15日20.9M/S|免费VPN/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/Singbox节点/SSR节点免费节点链接地址">VPN狗 | 4月15日20.9M/S|免费VPN/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/Singbox节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-14-node-share-links.htm" title="VPN狗 | 4月14日22.3M/S|免费VPN/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点免费节点链接地址">VPN狗 | 4月14日22.3M/S|免费VPN/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-19-node-share.htm" title="VPN狗 | 3月19日20.9M/S|免费VPN/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/Clash节点/V2ray节点免费节点链接地址">VPN狗 | 3月19日20.9M/S|免费VPN/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/Clash节点/V2ray节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-11-vpn-github.htm" title="VPN狗 | 3月11日19.7M/S|免费VPN/V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点免费节点链接地址">VPN狗 | 3月11日19.7M/S|免费VPN/V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-16-vpn-free.htm" title="VPN狗 | 4月16日20.7M/S|免费VPN/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点免费节点链接地址">VPN狗 | 4月16日20.7M/S|免费VPN/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-22-node-share.htm" title="VPN狗 | 4月22日21.9M/S|免费VPN/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点免费节点链接地址">VPN狗 | 4月22日21.9M/S|免费VPN/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-20-vpn-node.htm" title="VPN狗 | 4月20日18M/S|免费VPN/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点免费节点链接地址">VPN狗 | 4月20日18M/S|免费VPN/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点免费节点链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -448,7 +448,7 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf ~/Libra
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">16</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
