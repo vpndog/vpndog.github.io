@@ -355,10 +355,24 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <p data-start="2983" data-end="3048" class="">如你需要，我还可以为你整理一份 <strong data-start="2999" data-end="3016">不同游戏推荐节点区域对照表</strong> 或 <strong data-start="3019" data-end="3036">V2rayNG最优设置模板</strong>，是否需要我进一步补充？</p></div>
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
-        <p>上一个：<a href="/free-nodes/vpn-github-2026-8-5.htm">VPN狗 | 8月5日22.2M/S|免费VPN/Singbox节点/Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点免费节点链接地址</a></p>
         <p>下一个：<a href="/free-nodes/vpn-github-2026-8-7.htm">VPN狗 | 8月7日22M/S|免费VPN/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/SSR节点免费节点链接地址</a></p>
     </div>
 <h4>FAQ</h4>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 如何定时自动更新节点？</h5></div>
+    <div class="panel-body">
+        可在计划任务中添加命令 `passwall update` 并设定时间间隔，例如每日凌晨自动更新。这样可确保节点信息实时同步，避免旧节点失效影响连接体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 的测速功能如何优化节点选择？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 可测量节点延迟和丢包率，并根据结果排序策略组节点。延迟低的节点会优先使用，保证网页浏览、视频和游戏的速度和稳定性，提高整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>ShadowsocksR 支持哪些混淆插件？</h5></div>
+    <div class="panel-body">
+        ShadowsocksR 提供多种混淆方式，如 tls1.2_ticket_auth、http_simple、random_head 等。它们通过模拟正常流量特征来规避防火墙检测，使通信更加隐蔽。<hr />    </div>
+</div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 的节点测速结果如何优化网络体验？</h5></div>
     <div class="panel-body">
@@ -368,26 +382,6 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-heading"><h5>WinXray 的节点导入方式有哪些？</h5></div>
     <div class="panel-body">
         WinXray 支持手动添加节点、从 URL 订阅导入节点，以及批量导入 JSON 配置文件。用户可以直接复制订阅地址或粘贴节点链接，程序会自动解析并添加到节点列表中，操作十分便捷。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何定时自动更新节点？</h5></div>
-    <div class="panel-body">
-        可在计划任务中添加命令 `passwall update` 并设定时间间隔，例如每日凌晨自动更新。这样可确保节点信息实时同步，避免旧节点失效影响连接体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>ShadowsocksR 支持哪些混淆插件？</h5></div>
-    <div class="panel-body">
-        ShadowsocksR 提供多种混淆方式，如 tls1.2_ticket_auth、http_simple、random_head 等。它们通过模拟正常流量特征来规避防火墙检测，使通信更加隐蔽。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的测速功能如何优化节点选择？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 可测量节点延迟和丢包率，并根据结果排序策略组节点。延迟低的节点会优先使用，保证网页浏览、视频和游戏的速度和稳定性，提高整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的 UDP 转发功能需要注意什么？</h5></div>
-    <div class="panel-body">
-        SSR 的 UDP 转发需要服务端和客户端同时开启，同时确保服务器防火墙允许 UDP 通信。UDP 流量不可靠，可能在高丢包网络中导致连接中断，需要测试稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 的多路复用在短连接环境下有什么优势？</h5></div>
@@ -400,14 +394,19 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         QUIC 多路复用减少握手次数和延迟，适合高频短连接场景，如游戏和即时通讯。它能提高吞吐量和连接稳定性，在高丢包或高延迟环境下保持低延迟网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 节点排序如何提高视频播放流畅性？</h5></div>
+    <div class="panel-heading"><h5>SSR 的 UDP 转发功能需要注意什么？</h5></div>
     <div class="panel-body">
-        Matsuri 会测速节点延迟，并结合策略组自动选择延迟低、稳定性高的节点处理视频流量。减少缓冲和卡顿，保证在线视频播放顺畅，提高整体网络体验。<hr />    </div>
+        SSR 的 UDP 转发需要服务端和客户端同时开启，同时确保服务器防火墙允许 UDP 通信。UDP 流量不可靠，可能在高丢包网络中导致连接中断，需要测试稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 混淆方式如何提升抗封锁能力？</h5></div>
     <div class="panel-body">
-        混淆方式可将流量伪装成正常 HTTPS 或 HTTP 数据，降低被 DPI 检测风险。合理选择协议和混淆组合，可以提升节点稳定性和长期可用性，确保科学上网顺畅。    </div>
+        混淆方式可将流量伪装成正常 HTTPS 或 HTTP 数据，降低被 DPI 检测风险。合理选择协议和混淆组合，可以提升节点稳定性和长期可用性，确保科学上网顺畅。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 节点排序如何提高视频播放流畅性？</h5></div>
+    <div class="panel-body">
+        Matsuri 会测速节点延迟，并结合策略组自动选择延迟低、稳定性高的节点处理视频流量。减少缓冲和卡顿，保证在线视频播放顺畅，提高整体网络体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -455,16 +454,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-7-24-node-share.htm" title="VPN狗 | 7月24日22.7M/S|免费VPN/SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址">VPN狗 | 7月24日22.7M/S|免费VPN/SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-8-free-vpn-node.htm" title="VPN狗 | 8月8日20M/S|免费VPN/Shadowrocket节点/Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点免费节点链接地址">VPN狗 | 8月8日20M/S|免费VPN/Shadowrocket节点/Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-27-free-vpn.htm" title="VPN狗 | 7月27日21M/S|免费VPN/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点免费节点链接地址">VPN狗 | 7月27日21M/S|免费VPN/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-7-29.htm" title="VPN狗 | 7月29日18.4M/S|免费VPN/Singbox节点/Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点免费节点链接地址">VPN狗 | 7月29日18.4M/S|免费VPN/Singbox节点/Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-17-node-share-links.htm" title="VPN狗 | 7月17日19M/S|免费VPN/SSR节点/Trojan节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点免费节点链接地址">VPN狗 | 7月17日19M/S|免费VPN/SSR节点/Trojan节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-14-free-vpn-node.htm" title="VPN狗 | 8月14日18.5M/S|免费VPN/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点免费节点链接地址">VPN狗 | 8月14日18.5M/S|免费VPN/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-25-node-share-links.htm" title="VPN狗 | 7月25日20M/S|免费VPN/SSR节点/Trojan节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点免费节点链接地址">VPN狗 | 7月25日20M/S|免费VPN/SSR节点/Trojan节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-8-13.htm" title="VPN狗 | 8月13日22M/S|免费VPN/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN狗 | 8月13日22M/S|免费VPN/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-9-1.htm" title="VPN狗 | 9月1日18.4M/S|免费VPN/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点免费节点链接地址">VPN狗 | 9月1日18.4M/S|免费VPN/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点免费节点链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-12-free-vpn-node.htm" title="VPN狗 | 8月12日19.5M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点免费节点链接地址">VPN狗 | 8月12日19.5M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-16-free-vpn-node.htm" title="VPN狗 | 7月16日19.1M/S|免费VPN/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/Trojan节点/V2ray节点免费节点链接地址">VPN狗 | 7月16日19.1M/S|免费VPN/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/Trojan节点/V2ray节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-11.htm" title="VPN狗 | 8月11日19M/S|免费VPN/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/SSR节点免费节点链接地址">VPN狗 | 8月11日19M/S|免费VPN/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-8-9.htm" title="VPN狗 | 8月9日22.3M/S|免费VPN/Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点链接地址">VPN狗 | 8月9日22.3M/S|免费VPN/Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-8-19.htm" title="VPN狗 | 8月19日22.4M/S|免费VPN/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点免费节点链接地址">VPN狗 | 8月19日22.4M/S|免费VPN/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-vpn-proxy.htm" title="VPN狗 | 8月6日20.3M/S|免费VPN/SSR节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点免费节点链接地址">VPN狗 | 8月6日20.3M/S|免费VPN/SSR节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-8-7.htm" title="VPN狗 | 8月7日22M/S|免费VPN/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/SSR节点免费节点链接地址">VPN狗 | 8月7日22M/S|免费VPN/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-8-27.htm" title="VPN狗 | 8月27日22.8M/S|免费VPN/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/Clash节点免费节点链接地址">VPN狗 | 8月27日22.8M/S|免费VPN/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-9-3.htm" title="VPN狗 | 9月3日20M/S|免费VPN/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点链接地址">VPN狗 | 9月3日20M/S|免费VPN/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-22-vpn-free.htm" title="VPN狗 | 8月22日21.4M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点免费节点链接地址">VPN狗 | 8月22日21.4M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -476,10 +475,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
