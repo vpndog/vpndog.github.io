@@ -180,17 +180,18 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-10-2-node-share.htm">VPN狗 | 10月2日18.2M/S|免费VPN/SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点免费节点链接地址</a></p>
+        <p>下一个：<a href="/free-nodes/2026-10-4-node-share.htm">VPN狗 | 10月4日18.7M/S|免费VPN/Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点免费节点链接地址</a></p>
     </div>
 <h4>FAQ</h4>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 服务端出现 handshake timeout 如何处理？</h5></div>
+    <div class="panel-body">
+        该错误通常由网络延迟或证书配置不一致导致。请检查服务器带宽是否充足、TLS 证书链完整，并确保客户端 SNI 与证书匹配。必要时更换节点或优化拥塞控制算法。<hr />    </div>
+</div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 的连接失败常见原因有哪些？</h5></div>
     <div class="panel-body">
         Trojan 连接失败可能由于伪装域名错误、TLS 证书过期、防火墙阻挡端口或服务器不可达。通过查看客户端日志可以定位具体原因，并对症下药解决问题。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的 obfs 混淆原理是什么？</h5></div>
-    <div class="panel-body">
-        SSR 的 obfs 模块通过模拟常见流量特征（如 HTTPS 或 HTTP 请求头）来掩盖加密流量。这样可让代理流量看起来像正常的网页访问，从而有效降低被检测和封锁的风险。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 如何设置多入口实现不同访问控制？</h5></div>
@@ -198,14 +199,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         通过定义多个 inbound，对不同端口绑定不同的 tag 并在路由中匹配流量。可针对内网用户、远程用户或特定 IP 段应用不同规则，实现灵活访问控制与流量隔离。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 的 TAP 模式与 TUN 模式区别是什么？</h5></div>
+    <div class="panel-heading"><h5>Vmess 与 Trojan 哪个更快？</h5></div>
     <div class="panel-body">
-        TAP 模式模拟以太网接口，适合游戏流量代理；TUN 模式则模拟 IP 层接口，更适合全局代理。根据用途不同可自由选择，但需管理员权限运行。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的分流规则如何优化视频播放？</h5></div>
-    <div class="panel-body">
-        通过分流规则，将流媒体域名匹配到高速节点，而其他流量走备用节点。保证视频播放流畅，同时节约带宽资源，提升整体网络速度和体验。<hr />    </div>
+        在相同环境下，Trojan 通常连接更快，因为它使用原生 TLS 通道；Vmess 则稍有额外的协议开销。但在配置合理的情况下，两者的速度差距不大，主要取决于服务器线路质量。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 如何实现延迟最低节点自动切换？</h5></div>
@@ -218,14 +214,19 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         WebSocket 通过 HTTP 封装 TCP 流量，适合伪装成正常网页请求，增加隐蔽性。相比原生 TCP，可更好地绕过封锁和 DPI 检测，但略增加协议开销。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Vmess 与 Trojan 哪个更快？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 的分流规则如何优化视频播放？</h5></div>
     <div class="panel-body">
-        在相同环境下，Trojan 通常连接更快，因为它使用原生 TLS 通道；Vmess 则稍有额外的协议开销。但在配置合理的情况下，两者的速度差距不大，主要取决于服务器线路质量。<hr />    </div>
+        通过分流规则，将流媒体域名匹配到高速节点，而其他流量走备用节点。保证视频播放流畅，同时节约带宽资源，提升整体网络速度和体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 服务端出现 handshake timeout 如何处理？</h5></div>
+    <div class="panel-heading"><h5>Netch 的 TAP 模式与 TUN 模式区别是什么？</h5></div>
     <div class="panel-body">
-        该错误通常由网络延迟或证书配置不一致导致。请检查服务器带宽是否充足、TLS 证书链完整，并确保客户端 SNI 与证书匹配。必要时更换节点或优化拥塞控制算法。<hr />    </div>
+        TAP 模式模拟以太网接口，适合游戏流量代理；TUN 模式则模拟 IP 层接口，更适合全局代理。根据用途不同可自由选择，但需管理员权限运行。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的 obfs 混淆原理是什么？</h5></div>
+    <div class="panel-body">
+        SSR 的 obfs 模块通过模拟常见流量特征（如 HTTPS 或 HTTP 请求头）来掩盖加密流量。这样可让代理流量看起来像正常的网页访问，从而有效降低被检测和封锁的风险。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 分流规则如何优化游戏体验？</h5></div>
@@ -278,16 +279,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-9-14-free-vpn-node.htm" title="VPN狗 | 9月14日21.1M/S|免费VPN/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点免费节点链接地址">VPN狗 | 9月14日21.1M/S|免费VPN/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-10-3.htm" title="VPN狗 | 10月3日20.2M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/V2ray节点免费节点链接地址">VPN狗 | 10月3日20.2M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-node-subscribe.htm" title="VPN狗 | 9月4日21.8M/S|免费VPN/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点免费节点链接地址">VPN狗 | 9月4日21.8M/S|免费VPN/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点免费节点链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-9-15.htm" title="VPN狗 | 9月15日20.4M/S|免费VPN/Singbox节点/V2ray节点/Trojan节点/Clash节点/SSR节点/Shadowrocket节点免费节点链接地址">VPN狗 | 9月15日20.4M/S|免费VPN/Singbox节点/V2ray节点/Trojan节点/Clash节点/SSR节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-9-27.htm" title="VPN狗 | 9月27日20.7M/S|免费VPN/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点免费节点链接地址">VPN狗 | 9月27日20.7M/S|免费VPN/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-9-3.htm" title="VPN狗 | 9月3日20M/S|免费VPN/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点链接地址">VPN狗 | 9月3日20M/S|免费VPN/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-9-29.htm" title="VPN狗 | 9月29日22.9M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN狗 | 9月29日22.9M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-23.htm" title="VPN狗 | 9月23日18.5M/S|免费VPN/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点免费节点链接地址">VPN狗 | 9月23日18.5M/S|免费VPN/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-9-11.htm" title="VPN狗 | 9月11日22.4M/S|免费VPN/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点/Singbox节点免费节点链接地址">VPN狗 | 9月11日22.4M/S|免费VPN/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点/Singbox节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-25.htm" title="VPN狗 | 9月25日18.8M/S|免费VPN/V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点免费节点链接地址">VPN狗 | 9月25日18.8M/S|免费VPN/V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-12-top-vpn-node.htm" title="VPN狗 | 9月12日21.3M/S|免费VPN/SSR节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN狗 | 9月12日21.3M/S|免费VPN/SSR节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-10-free-vpn-node.htm" title="VPN狗 | 9月10日18.3M/S|免费VPN/SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点免费节点链接地址">VPN狗 | 9月10日18.3M/S|免费VPN/SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点免费节点链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-9.htm" title="VPN狗 | 9月9日20.2M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点免费节点链接地址">VPN狗 | 9月9日20.2M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-22-top-vpn-node.htm" title="VPN狗 | 9月22日18.3M/S|免费VPN/Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点免费节点链接地址">VPN狗 | 9月22日18.3M/S|免费VPN/Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-28-vpn-free.htm" title="VPN狗 | 9月28日19.8M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点/SSR节点免费节点链接地址">VPN狗 | 9月28日19.8M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-13.htm" title="VPN狗 | 9月13日19.5M/S|免费VPN/SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN狗 | 9月13日19.5M/S|免费VPN/SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-24-vpn-free.htm" title="VPN狗 | 9月24日22.2M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址">VPN狗 | 9月24日22.2M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-30-top-vpn-node.htm" title="VPN狗 | 9月30日20M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点免费节点链接地址">VPN狗 | 9月30日20M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点免费节点链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -299,7 +300,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">10</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
